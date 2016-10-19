@@ -1,5 +1,6 @@
 module Tinify
   class Source
+    attr_accessor :url, :commands
     class << self
       def from_file(path)
         from_buffer(File.open(path, "rb") { |file| file.read })
